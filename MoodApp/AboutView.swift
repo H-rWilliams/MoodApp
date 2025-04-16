@@ -10,21 +10,21 @@ import SwiftUI
 struct AboutView: View {
     var body: some View {
         
-        VStack(){
-            Text("About")
-                .font(.system(size: 50, weight: .heavy, design: .serif))
-        }
-        
-        Spacer()
-        
-        VStack{
+        ZStack{
             
-            Text("This app is created to help you choose your mood for today")
-                .padding(30)
-            
+            VStack{
+                
+                Text("About")
+                    .font(.system(size: 50, weight: .heavy, design: .serif))
+                
+                Spacer()
+                
+                Text("This app is created to help you choose your mood for today")
+                    .padding(30)
+                    .padding(.bottom, 400)
+                
+            }
         }
-        .padding(.bottom, 400)
-        
     }
 }
 
