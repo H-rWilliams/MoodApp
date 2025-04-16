@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         
         TabView{
-            HomeView()
+            MoodPickerView(selectedMood: .happy)
                 .tabItem{
                     Label("Home", systemImage: "person")
                 }

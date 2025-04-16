@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MoodPickerView: View {
     
-    @Binding var selectedMood: Mood
+    @State var selectedMood: Mood
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
@@ -18,7 +18,7 @@ struct MoodPickerView: View {
             HStack {
                 Text(mood.emoji)
                     .font(.largeTitle)
-                Text(mood.message)                       .padding(.leading, 10)
+                Text(mood.message).padding(.leading, 10)
             }
             .padding()
             .onTapGesture {
@@ -31,6 +31,6 @@ struct MoodPickerView: View {
 }
 
 #Preview {
-    MoodPickerView()
+    MoodPickerView(selectedMood: .happy)
 }
 
