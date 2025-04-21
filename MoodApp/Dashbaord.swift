@@ -22,7 +22,7 @@ struct DashboardView: View {
                         .font(.body)
                     
                     NavigationLink(destination: MoodPickerView(selectedMood: $selectedMood)) {
-                        Text("Change Mood")
+                        Text("Pick Your Mood")
                             .padding()
                             .background(Color.blue)
                             .foregroundColor(.white)

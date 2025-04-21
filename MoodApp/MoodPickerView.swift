@@ -10,6 +10,7 @@ import SwiftUI
 
 struct MoodPickerView: View {
     @Binding var selectedMood: Mood
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
         List {
@@ -26,9 +27,11 @@ struct MoodPickerView: View {
                 .contentShape(Rectangle())
                 .onTapGesture {
                     selectedMood = mood
+                    dismiss()
                 }
             }
         }
         .navigationTitle("Pick Your Mood")
     }
 }
+
