@@ -32,7 +32,7 @@ struct AboutView: View {
                 Group {
                     
                     VStack {
-                        Text("🧠 Roberto")
+                        Text("🧠 Hunter")
                         Text("Enum Master + Data Wrangler")
                     }
                     Divider()
@@ -42,12 +42,12 @@ struct AboutView: View {
                     }
                     Divider()
                     VStack {
-                        Text("🛠 Charles")
+                        Text("🛠 Roberto")
                         Text("Dashboard Commander")
                     }
                     Divider()
                     VStack {
-                        Text("📱 Hunter")
+                        Text("📱 Charles")
                         Text("Mood Picker Wizard")
                     }
                 }
