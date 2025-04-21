@@ -17,7 +17,7 @@ struct AboutView: View {
                 Text("About")
                     .font(.system(size: 50, weight: .heavy, design: .serif))
                 
-                Text("Mood Board App")
+                Text("Team MoodMates")
                     .font(.subheadline)
                 
                 Divider()
@@ -26,9 +26,47 @@ struct AboutView: View {
                 
                 Spacer()
                 
-                Text("This app is created to help you choose your mood for today")
+                Text("This app is created to help you choose your mood for the day.")
                     .padding(30)
                 
+                Group {
+                    
+                    VStack {
+                        Text("🧠 Roberto")
+                        Text("Enum Master + Data Wrangler")
+                    }
+                    Divider()
+                    VStack {
+                        Text("🎨 Maksim")
+                        Text("Design Guru + About Page Magician")
+                    }
+                    Divider()
+                    VStack {
+                        Text("🛠 Charles")
+                        Text("Dashboard Commander")
+                    }
+                    Divider()
+                    VStack {
+                        Text("📱 Hunter")
+                        Text("Mood Picker Wizard")
+                    }
+                }
+                
+                .font(.subheadline)
+                
+            }
+            
+            VStack{
+                Text("Bringing you daily vibes, one emoji at a time.")
+                                .font(.headline)
+                                .multilineTextAlignment(.center)
+                                .padding(.top, 30)
+                                .padding()
+                
+                Spacer(minLength: 200)
+                
+                Text("Created by Maksim Leontiy, Roberto Perez, Hunter Williams, and Charles Laxa.")
+                    .padding(30)
             }
         }
     }
