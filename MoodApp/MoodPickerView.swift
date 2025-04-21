@@ -9,28 +9,26 @@
 import SwiftUI
 
 struct MoodPickerView: View {
-    
-    @State var selectedMood: Mood
-    @Environment(\.dismiss) var dismiss
+    @Binding var selectedMood: Mood
 
     var body: some View {
-        List(Mood.allCases, id: \.self) { mood in
-            HStack {
-                Text(mood.emoji)
-                    .font(.largeTitle)
-                Text(mood.message).padding(.leading, 10)
-            }
-            .padding()
-            .onTapGesture {
-                selectedMood = mood
-                dismiss()
+        List {
+            ForEach(Mood.allCases) { mood in
+                HStack {
+                    Text(mood.emoji)
+                    Text(mood.rawValue)
+                    Spacer()
+                    if mood == selectedMood {
+                        Image(systemName: "checkmark")
+                            .foregroundColor(.blue)
+                    }
+                }
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    selectedMood = mood
+                }
             }
         }
         .navigationTitle("Pick Your Mood")
     }
 }
-
-#Preview {
-    MoodPickerView(selectedMood: .happy)
-}
-
