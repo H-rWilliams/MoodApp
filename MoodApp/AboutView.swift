@@ -63,7 +63,7 @@ struct AboutView: View {
                                 .padding(.top, 30)
                                 .padding()
                 
-                Spacer(minLength: 200)
+                Spacer(minLength: 120)
                 
                 Text("Created by Maksim Leontiy, Roberto Perez, Hunter Williams, and Charles Laxa.")
                     .padding(30)
