@@ -32,3 +32,14 @@ struct MoodPickerView: View {
         .navigationTitle("Pick Your Mood")
     }
 }
+
+struct MoodPickerView_Previews: PreviewProvider {
+    @State static var previewMood: Mood = .happy
+
+    static var previews: some View {
+        NavigationView {
+            MoodPickerView(selectedMood: $previewMood)
+        }
+    }
+}
+
